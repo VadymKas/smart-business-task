@@ -1,0 +1,31 @@
+@import 'variables';
+
+.user {
+  display: flex;
+  align-items: center;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 1px 1px 5px $gray;
+  padding: 10px 20px;
+
+  & > * {
+    position: relative;
+    width: 25%;
+    text-align: center;
+  }
+
+  & > *:not(:last-child)::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: $gray;
+  }
+
+  & > *:hover {
+    color: $pink;
+  }
+}
